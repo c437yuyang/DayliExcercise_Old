@@ -64,6 +64,37 @@ void QuickSort(int *arr, int n) {
   }
 }
 
+/*
+// 20200404 review
+
+int partition(int *arr, int L, int R) {
+  if (L >= R) {
+    return L;
+  }
+  int i = L, j = R - 1;
+  int pivot = arr[R];
+  while (i <= j) { // 这种写法是必须带等于的
+    if (arr[i] > pivot) {
+      std::swap(arr[i], arr[j--]);
+    } else if (arr[i] <= pivot) {
+      i++;
+    }
+  }
+  std::swap(arr[i], arr[R]);
+  return i;
+}
+
+void quick_sort(int *arr, int L, int R) {
+  if (L >= R) {
+    return;
+  }
+  int pos = partition(arr, L, R);
+  quick_sort(arr, L, pos - 1);
+  quick_sort(arr, pos + 1, R);
+}
+
+*/
+
 int main() {
   // int arr[] = { 8,5,9,7,1,8,7,10,3 };
   int arr[] = {4, 4, 3, 0, 0};
