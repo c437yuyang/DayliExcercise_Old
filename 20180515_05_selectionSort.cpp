@@ -5,6 +5,7 @@
 #include <limits>
 
 /*
+// 20200404 review
 // 选出最大的放到最后
 void selection_sort(int *arr, int n) {
   int max_idx = -1;
