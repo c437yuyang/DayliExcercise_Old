@@ -74,7 +74,8 @@ class Solution
 
 int main()
 {
-	auto v = Solution().subsetsWithDup(std::vector<int>{1, 2, 2});
-
+  std::vector<int> nums{1, 2, 2};
+	auto v = Solution().subsetsWithDup(nums);
+  yxp_utility::ArrayHelper::printMatrix(v);
 	return 0;
 }
